@@ -99,29 +99,25 @@ class _ProductPageState extends State<ProductPage> {
                       SizedBox(width: 10),
                       Row(
                         children: [
-                          ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
-                              minimumSize: MaterialStateProperty.all(Size(1, 1)),
-                            ),
+                          IconButton(
                             onPressed: () {
                               _incrementQuantity(index);
                             },
-                            child: Icon(Icons.add),
+                            icon: Icon(Icons.add),
+                            color: Colors.green, // Set the icon color
                           ),
+
                           SizedBox(width: 10),
                           Text('${products[index].quantity}'),
                           SizedBox(width: 10),
-                          ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
-                              minimumSize: MaterialStateProperty.all(Size(5, 5)), // Adjust the width and height as needed
-                            ),
+                          IconButton(
                             onPressed: () {
                               _decrementQuantity(index);
                             },
-                            child: Icon(Icons.remove),
+                            icon: Icon(Icons.remove),
+                            color: Colors.green, // Set the icon color
                           ),
+
                         ],
                       ),
 
