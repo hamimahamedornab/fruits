@@ -91,12 +91,11 @@ class _ProductPageState extends State<ProductPage> {
                   Image.asset('assets/product_image.png',width: 50,
                       height: 30, ),
                   Text(products[index].name),
+                  SizedBox(height: 10),
                   Text('\$${products[index].price.toStringAsFixed(2)}'),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Quantity: ${products[index].quantity}'),
-                      SizedBox(width: 10),
                       Row(
                         children: [
                           IconButton(
@@ -107,9 +106,9 @@ class _ProductPageState extends State<ProductPage> {
                             color: Colors.green, // Set the icon color
                           ),
 
-                          SizedBox(width: 10),
+                          SizedBox(width: 25),
                           Text('${products[index].quantity}'),
-                          SizedBox(width: 10),
+                          SizedBox(width: 25),
                           IconButton(
                             onPressed: () {
                               _decrementQuantity(index);
